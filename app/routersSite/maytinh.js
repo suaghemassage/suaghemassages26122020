@@ -69,6 +69,8 @@ router.get('/sua-ghe-massage-bac-ninh',MaytinhController.suaghemassagebacninh_ge
 router.get('/sua-ghe-massage-tai-bac-ninh',MaytinhController.suaghemassagebacninhredirect_get_home);
 router.get('/sua-ghe-massage',MaytinhController.suaghemassage_get_home);
 router.get('/thay-da-ghe-massage',MaytinhController.thaydaghemassage_get_home);
+router.get('/boc-da-ghe-massage',MaytinhController.thaydaghemassage_get_home);
+router.get('/dich-vu-thay-da-boc-da-ghe-massage',MaytinhController.thaydaghemassage_get_home);
 router.get('/boc-da-ghe-massage-poogsan',MaytinhController.thaydaghemassage_get_home);
 router.get('/boc-da-ghe-massage-boss',MaytinhController.thaydaghemassage_get_home);
 router.get('/boc-da-ghe-massage-maxcare',MaytinhController.thaydaghemassage_get_home);
@@ -112,6 +114,8 @@ router.get('/thay-da-ghe-massage-quang-ninh',MaytinhController.thaydaghemassageq
 router.get('/thay-da-ghe-massage-o-quang-ninh',MaytinhController.thaydaghemassagequangninh_get_home);
 router.get('/thay-da-ghe-massage-thai-binh',MaytinhController.thaydaghemassagethaibinh_get_home);
 router.get('/thay-da-ghe-massage-o-thai-binh',MaytinhController.thaydaghemassagethaibinh_get_home);
+router.get('/thay-da-ghe-massage-thai-nguyen',MaytinhController.thaydaghemassagethainguyen_get_home);
+router.get('/thay-da-ghe-massage-o-thai-nguyen',MaytinhController.thaydaghemassagethainguyen_get_home);
 router.get('/thay-da-ghe-massage-thanh-hoa',MaytinhController.thaydaghemassagethanhhoa_get_home);
 router.get('/thay-da-ghe-massage-o-thanh-hoa',MaytinhController.thaydaghemassagethanhhoa_get_home);
 router.get('/thay-da-ghe-massage-vinh-phuc',MaytinhController.thaydaghemassagevinhphuc_get_home);

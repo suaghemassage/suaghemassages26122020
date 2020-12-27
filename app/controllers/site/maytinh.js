@@ -1417,6 +1417,39 @@ exports.thaydaghemassagethaibinh_get_home = (req, res, next) => {
          res.render('mobile/ghemassage/mienbac/thaydaghemassagethaibinh',{poststuvan:poststuvan,layout:'layouts/layoutmobile/layoutmobilethaydathaibinh'});
        })
 }
+exports.thaydaghemassagethainguyen_get_home = (req, res, next) => {
+  Post.find({typepost:"Tư Vấn Chọn Mua"})
+       .select("_id title titleseo shortdescription description day ogtitle ogdescription keywords typepost image index")
+       .limit(6)
+       .sort('index')
+       .exec()
+       .then(docs => {
+         const poststuvan = {
+           count: docs.length,
+           post: docs.map(doc => {
+             return {
+               title: doc.title,
+               titleseo: doc.titleseo,
+               shortdescription: doc.shortdescription,
+               _id: doc._id,
+               description:doc.description,
+               day:doc.day,
+               ogtitle:doc.ogtitle,
+               ogdescription:doc.ogdescription,
+               keywords:doc.keywords,
+               typepost:doc.typepost,
+               image:doc.image,
+               index:doc.index,
+               request: {
+                 type: "GET",
+                 url: "http://localhost:3000/ghemassages/" + doc._id
+               }
+             };
+           })
+         };
+         res.render('mobile/ghemassage/mienbac/thaydaghemassagethainguyen',{poststuvan:poststuvan,layout:'layouts/layoutmobile/layoutmobilethaydathainguyen'});
+       })
+}
 exports.thaydaghemassagethanhhoa_get_home = (req, res, next) => {
   Post.find({typepost:"Tư Vấn Chọn Mua"})
        .select("_id title titleseo shortdescription description day ogtitle ogdescription keywords typepost image index")
