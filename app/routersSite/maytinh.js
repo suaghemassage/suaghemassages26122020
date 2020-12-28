@@ -5,7 +5,11 @@ var Cart = require('../models/cart');
  var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 router.get('/thao-lap-di-doi-van-chuyen-ghe-massage',MaytinhController.vanchuyenlapdatghemassage_get_home);
+router.get('/tin-tuc/lap-dat-van-chuyen-ghe-massage',MaytinhController.vanchuyenlapdatghemassage_get_home);
+
 router.get('/dich-vu-sua-ghe-massage',MaytinhController.suaghemassage_get_home);
+router.get('/tin-tuc/sua-ghe-massage-tai-ha-noi',MaytinhController.suaghemassage_get_home);
+router.get('/dich-vu-sua-chua-may-chay-bo',MaytinhController.suaghemassage_get_home);
 router.get('/sua-ghe-massage-o-hung-yen',MaytinhController.suaghemassagehungyen_get_home);
 router.get('/sua-ghe-massage-hung-yen',MaytinhController.suaghemassagehungyen_get_home);
 router.get('/sua-ghe-massage-tai-hung-yen',MaytinhController.suaghemassagehungyenredirect_get_home);
