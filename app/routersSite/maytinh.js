@@ -149,6 +149,7 @@ router.get('/boc-da-ghe-massage-tai-xuan-mai',MaytinhController.bocdaghemassagex
 
 router.get('/thay-tui-hoi-ghe-massage',MaytinhController.thaytuihoighemassage_get_home);
 router.get('/cho-thue-ghe-massage',MaytinhController.chothueghemassage_get_home);
+router.get('/tin-tuc/cho-thue-ghe-massage',MaytinhController.chothueghemassage_get_home);
 router.get('/thao-lap-van-chuyen-ghe-massage',MaytinhController.vanchuyenlapdatghemassage_get_home);
 router.get('/thu-mua-ghe-massage-cu',MaytinhController.thumuaghemassage_get_home);
 router.get('/tin-tuc/thu-mua-ghe-massage-cu-gia-cao',MaytinhController.thumuaghemassage_get_home);
